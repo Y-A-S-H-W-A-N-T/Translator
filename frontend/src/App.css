@@ -1,0 +1,21 @@
+.mic{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+img{
+    filter: drop-shadow(5px 5px 5px red);
+}
+
+img:hover{
+    cursor: pointer;
+    transition: 600ms;
+    filter: drop-shadow(6px 6px 6px green);
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
