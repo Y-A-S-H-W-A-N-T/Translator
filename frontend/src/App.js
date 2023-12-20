@@ -6,8 +6,9 @@ import SpeechRecognition, {useSpeechRecognition} from 'react-speech-recognition'
 function App() {
 
   const [transalation,setTranslation] = useState()
-  const [language,setLanguage] = useState('ur')
+  const [language,setLanguage] = useState('te')
   const [en,setEn] = useState()
+  const [sentence,setSentence] = useState()
 
   const {
     transcript,
@@ -23,6 +24,7 @@ function App() {
 
 
   const Convert = async()=>{
+    setSentence(transcript)
     const url = 'https://google-translate113.p.rapidapi.com/api/v1/translator/text';
     const options = {
       method: 'POST',
@@ -34,7 +36,7 @@ function App() {
       body: new URLSearchParams({
         from: 'auto',
         to: language,
-        text: transcript
+        text: sentence
       })
     }
     try {
@@ -57,7 +59,7 @@ function App() {
       body: new URLSearchParams({
         from: 'auto',
         to: 'en',
-        text: transalation
+        text: sentence
       })
     }
     try {
@@ -67,6 +69,12 @@ function App() {
     } catch (error) {
       console.error(error)
     }
+  }
+
+  const Speech = (words)=>{
+    console.log(words)
+    const to_speak = new SpeechSynthesisUtterance(words)
+    window.speechSynthesis.speak(to_speak)
   }
 
   return (
@@ -90,7 +98,7 @@ function App() {
           <button onClick={English_Conversion}>To English</button>
         </div>
         <div className='text'>
-            <h1>{en}</h1>
+            <h1>{en}</h1><br/><button onClick={()=>Speech(en)}>SPEECH</button>
         </div>
         
     </div>
