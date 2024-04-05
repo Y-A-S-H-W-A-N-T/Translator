@@ -1,0 +1,58 @@
+/* Styles for the outer container */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; /* Adjust margin as needed */
+  }
+  
+  /* Styles for the div containing 'listening' status */
+  div:nth-child(1) {
+    margin-bottom: 10px; /* Adjust margin as needed */
+  }
+  
+  /* Styles for the div containing the transcript */
+  div:nth-child(2) {
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
+  
+  /* Styles for the microphone image */
+  div.mic {
+    cursor: pointer;
+  }
+  
+  /* Styles for the select dropdown */
+  select {
+    margin-bottom: 10px; /* Adjust margin as needed */
+  }
+  
+  /* Styles for the button to convert */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Adjust color as needed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styles for the speech button */
+  button:nth-child(3) {
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+  
+  /* Additional styles for h1 elements */
+  h1 {
+    font-size: 24px; /* Adjust font size as needed */
+  }
+  
+  /* Styles for the 'on' and 'off' text */
+  div:nth-child(1) div {
+    font-weight: bold;
+  }
+  
+  /* Styles for the image */
+  img {
+    border-radius: 50%; /* Makes the image circular */
+  }
+  

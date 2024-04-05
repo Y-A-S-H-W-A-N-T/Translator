@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center horizontally and vertically */
+    height: 100vh; /* Set container height to full viewport height */
+  }
+  
+  .text {
+    margin-bottom: 10px;
+  }
+  
+  .transcript h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .mic img {
+    cursor: pointer;
+  }
+  
+  .language-dropdown {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .convert-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .translation h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .english-conversion {
+    background-color: #28a745;
+  }
+  
+  .speech-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
